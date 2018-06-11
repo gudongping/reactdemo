@@ -8,6 +8,7 @@ let eleObj = {
     id:1,
     children:['hello', {
       type:'span',
+      key: 1,
       props: {
         className: 'blue',
         children: ['world']
@@ -16,12 +17,11 @@ let eleObj = {
   }
 };
 
-/* ReactDOM.render(
-  ele,
-  document.getElementById('root')
-); */
-
-console.log(React.createElement('h1',{id:'haha'},['hello world']));
+/* let obj = React.createElement('h1',{id:'haha', style:{fontSize:'20px',background:'red'}},['hello world',
+  React.createElement('span',{key:1},['嘿嘿'])
+]);
+console.log(obj);
+ReactDOM.render(obj,document.getElementById('root')); */
 
 function render(eleObj, container) {
   let {type, props} = eleObj;
