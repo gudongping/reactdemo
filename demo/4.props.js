@@ -30,7 +30,9 @@ class Person extends Component {
         <p>姓名: {this.props.name}</p>
         <p>年龄: {this.props.age}</p>
         <p>心情: {heart}</p>
-        <button onClick={this.handleClick}>改变</button>
+        {/*用es6语法的话，那么函数必须定义成箭头函数*/}
+        {/*用es5语法的话，那么函数必须要bind一下*/}
+        <button onClick={this.handleClick.bind(this)}>改变</button>
       </div>
     )
   }
