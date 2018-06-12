@@ -50,6 +50,7 @@ export default class Suggest extends Component {
           <div className="col-md-8 col-md-offset-2">
             <div className="panel panel-default">
               <div className="panel-heading">
+                {/*注意value这个地方，千万，千万不要出现undefined*/}
                 <input type="text" onKeyDown={this.handleKeyDown} className="form-control" 
                 onChange={this.handleChange} value={this.state.val}/>
               </div>
