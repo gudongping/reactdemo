@@ -8,6 +8,7 @@ import Login from "./components/Login"
 
 export default class App extends Component {
   render() {
+    // switch是使用了，就短路，不往下繼續匹配
     return (
       <Router>
         <div>
