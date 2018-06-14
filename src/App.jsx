@@ -6,6 +6,7 @@ import Profile from './components/Profile';
 import ProtectedRoute from "./components/ProtectedRoute";
 import Login from "./components/Login"
 import MenuLink from "./components/MenuLink"
+import NotFound from './components/NotFound'
 
 export default class App extends Component {
   render() {
@@ -39,7 +40,8 @@ export default class App extends Component {
                   <Route path="/user" component= {User}/>
                   {/* 路由保護 <Route path="/profile" component= {Profile}/>*/}
                   <ProtectedRoute path='/profile' component= {Profile}/>
-                  <Route path="/login" component={Login}/>>
+                  <Route path="/login" component={Login}/>
+                  <Route component={NotFound} />
                 </Switch>
               </div>
             </div>
