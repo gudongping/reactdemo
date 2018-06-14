@@ -5,6 +5,7 @@ import User from './components/User';
 import Profile from './components/Profile';
 import ProtectedRoute from "./components/ProtectedRoute";
 import Login from "./components/Login"
+import MenuLink from "./components/MenuLink"
 
 export default class App extends Component {
   render() {
@@ -20,9 +21,12 @@ export default class App extends Component {
                 </div>
               </div>
               <ul className="nav navbar-nav">
-                <li><Link to="/home">首頁</Link></li>
-                <li><Link to="/user">用戶管理</Link></li>
-                <li><Link to="/profile">個人設置</Link></li>
+                <MenuLink label="首頁" to="/home"/>
+                <MenuLink label="用戶管理" to="/user"/>
+                <MenuLink label="個人設置" to="/profile"/>
+                {/* <li><Link to="/home">首頁</Link></li> */}
+                {/* <li><Link to="/user">用戶管理</Link></li> */}
+                {/* <li><Link to="/profile">個人設置</Link></li> */}
               </ul>
             </div>
           </nav>
